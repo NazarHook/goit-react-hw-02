@@ -43,8 +43,7 @@ function App() {
     <>
       <Description></Description>
       <Options updateFunction={updateFeedback} result={totalFeedback} resetFunction={resetValues}></Options>
-      {totalFeedback !== 0 && <Feedback marks={feedback}></Feedback>}
-      <Notification result={totalFeedback} percentage={positiveResult}></Notification>
+      {totalFeedback !== 0 ? <Feedback marks={feedback} result={totalFeedback} percentage={positiveResult}></Feedback> : <Notification result={totalFeedback}></Notification>}
     </>
   );
 }
